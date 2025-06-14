@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background: #fff5cc;
+        color: #ff9900;
+        font-family: Arial, sans-serif;
+      }
+      .animal {
+        position: relative;
+        border: 5px solid #ffcc5b;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background: #fff0b5;
+        box-shadow: 0 4px 14px rgb(0 0 0 / 0.3);
+        text-align: center;
+      }
+      .animal-img {
+        max-width: 200px;
+        border-radius: 50%;
+        border: 5px solid #ffcc5b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Portfolio</h1>
+
+    <h5>Add Your Image</h5>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.as_p }}
+      <input class="btn btn-warning" type="submit" value="Add" />
+    </form>
+
+    <h2>Uploaded</h2>
+
+    {% for item in images %}
+    <div class="animal">
+      <img src="{{ item.photo.url }}" alt="User Image" class="animal-img" />
+      <img src="https://api.random.dog/meow/?format=json" alt="Random Animal" />
+    </div>
+    {% endfor %}
+  </body>
+</html>

@@ -2,7 +2,7 @@
 This Portfolio Application is a simple yet charming platform designed for users to showcase their photos alongside a randomly selected animal character. The application is implemented using Django (Python) with a lightweight HTML + CSS frontend.
 
 
- Features 🔹:
+ Feature 🔹:
 User Image Upload: Allows users to upload their own photos.
 
 Random Animal Display: Displays a random animal picture alongside each user's photo, adding a fun, child-like appeal.
